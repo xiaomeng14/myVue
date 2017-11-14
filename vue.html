@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Vue.js</title>
+</head>
+<body>
+	<!--<div id="demo">
+		<p>{{a}}</p>
+		<p v-text="a"></p>
+		<p v-html="a"></p>
+		<p v-if="isShow"></p>
+		<p v-show="isShow"></p>
+		<ul>
+			<li v-for='item in items'>
+				<p v-text='item.label'></p>
+			</li>
+		</ul>-->
+		
+		<!--事件绑定：v-on-->
+		<!--<button v-on:click="doThis">事件1</button>
+		<button @click="doThis">事件2</button>
+		-->
+		<!--<img v-bind:src="imageSrc" />-->
+		<!--<div :class="{red:inRed}"></div>
+		<div :class="[classA,classB]"></div>
+		<div :class="[classA,{classB:isB,classC:isC}]"></div>-->
+	<!--</div>
+	
+	<div id="app-2">
+		<span v-bind:title="message">
+			鼠标悬停显示提示信息
+		</span>
+	</div>-->
+	
+	<!--<div id="app-3">
+		<p v-if="seen">现在你看到我了</p>
+	</div>
+	
+	<div id="app-4">
+		<ol>
+			<li v-for="todo in todos">
+				{{todo.text}}
+			</li>
+		</ol>
+	</div>-->
+	
+	<!--<div id="app-5">
+		<p>{{message}}</p>
+		<button v-on:click="reverseMessage">逆转消息</button>
+		<button v-on:click="othersWay">增加内容</button>
+	</div>
+	
+	<div id="app-6">
+		<p>{{message}}</p>
+		<input v-model="message" />
+	</div>-->
+	
+	
+	
+	<!--<div id="app-7">
+		<ol>
+			<todo-item
+				v-for="item in groceryList"
+				v-bind:todo="item"
+				v-bind:key="item.id">
+			</todo-item>
+		</ol>
+	</div>-->
+	
+	
+	<div id="app">
+		<!--<h1>{{message}}</h1>
+		<input type="text" v-model="message" />
+		<pre>
+			{{$data | json}}
+		</pre>-->
+	
+	
+		<div class="error" v-show="!message">You must enter a message to submit</div>
+		<textarea name="" id="" cols="30" rows="10" v-model="message"></textarea>
+		<button v-show="message">send message</button>
+		
+		<pre>
+			{{$data | json}}
+		</pre>
+	
+	</div>
+</body>
+</html>
+<script src="dist/vue.min.js"></script>
+<script>
+	
+	new Vue ({
+		el:"#app",
+		data:{
+			message:''
+		}
+	})
+	
+	
+	
+	
+	
+	
+	
+//	var demo = new Vue ({
+//		el:'#app',
+//		data:{
+//			message:'Hello World！'
+//		}
+//	})
+	
+	//data代表vue对象的数据，methods代表vue对象的方法，watch设置了对象监听的方法
+	//重要指令:
+	//v-text渲染数据
+	//v-if控制显示
+	//v-on绑定事件
+	//v-for循环渲染等
+	
+//	var demo = new Vue ({
+//		el:'#demo',
+//		data:{
+//			a:1,
+//			b: [],
+//			isShow:true,
+//			items:[
+//				{
+//					label:'apple'
+//				},
+//				{
+//					label:'banana'
+//				},
+//				{
+//					label:'orange'
+//				}
+//			]
+//		},
+//		methods:{
+//			doSomething:function () {
+//				this.a ++
+//			},
+//			doThis:function (someThing) {
+//				
+//			}
+//		},
+//		watch :{
+//			'a':function (val,oldVal) {
+//				console.log(val,oldVal);
+//			}
+//		}
+//	})
+//	
+//	var app2 = new Vue ({
+//		el:'#app-2',
+//		data:{
+//			message:'页面加载'+new Date().toLocaleString()
+//		}
+//	})
+//
+//	var app3 = new Vue ({
+//		el:"#app-3",
+//		data:{
+//			seen:true
+//		}
+//	})
+//
+//  var app4 = new Vue({
+//  	el:"#app-4",
+//  	data:{
+//  		todos:[
+//  			{text:'学习Javascript'},
+//  			{text:'学习Vue'},
+//  			{text:'做出牛项目'}
+//  		]
+//  	}
+//  })
+//  
+//  var app5 = new Vue ({
+//  	el:"#app-5",
+//  	data:{
+//  		message:"Hello Vue.js!"
+//  	},
+//  	methods:{
+//  		reverseMessage:function () {
+//  			this.message = this.message.split('').reverse().join('');
+//  		},
+//  		othersWay:function () {
+//  			this.message = this.message.split('').push('我是添加在后面的内容');
+//  		}
+//  	}
+//  })
+//  
+//  var app6 = new Vue ({
+//  	el:"#app-6",
+//  	data:{
+//  		message:'你管我是谁'
+//  	}
+//  })
+//
+//  //组件化应用构建
+//  Vue.component('todo-item',{
+//  	props:['todo'],
+//  	template:'<li>{{todo.text}}</li>'
+//  })
+//
+//	var app7 = new Vue ({
+//		el:"#app-7",
+//		data:{
+//			groceryList:[
+//				{id:0,text:'蔬菜'},
+//				{id:1,text:'奶酪'},
+//				{id:2,text:'水果'}
+//			]
+//		}
+//	})
+
+</script>
